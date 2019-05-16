@@ -190,13 +190,19 @@ class Run extends Component {
 	
   render() {
 		console.log('state: ', this.state);
-    return (
-      <div className="tertiary-style">
-        <div className="container padding-20">
-          Production
-        </div>
-      </div>
-    );
+		if (this.state.runSrc !== undefined) {
+			return (
+				<div className="tertiary-style">
+					<div className="container padding-20">
+						{this.getPreview()}
+					</div>
+				</div>
+			);			
+		}
+		else {
+			return (<div>Empty</div>);
+		}
+		
   }
 }
 

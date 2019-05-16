@@ -1,0 +1,40 @@
+.mod-social-network {
+  color: #ffffff;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mod-icon-facebook {
+  background-image: url('../../../assets/icon-facebook.svg');
+}
+
+.mod-icon-twitter {
+  background-image: url('../../../assets/icon-twitter.svg');
+}
+
+.mod-icon-instagram {
+  background-image: url('../../../assets/icon-instagram.svg');
+}
+
+.mod-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.mod-social-network .mod-btn {
+  flex: 1 1 auto;
+  margin: 0 10px;
+}
+
+.mod-btn-circle {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}

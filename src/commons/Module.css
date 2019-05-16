@@ -1,0 +1,97 @@
+
+.mod-run {
+  min-height: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.mod-run .mod-box {
+  flex: 1 1 auto;
+  width: 100%;
+  position: relative;
+}
+
+.mod-run .mod-row {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.mod-row-small {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.mod-btn {
+  background: #ff006b;
+  color: #ffffff;
+  border: 0;
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.mod-btn.mod-small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.mod-btn.mod-large-full {
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.mod-btn-no-space {
+  margin-right: 0;
+}
+
+.mod-inp {
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  border: 0;
+  height: 40px;
+}
+
+textarea.mod-inp {
+  padding: 10px;
+  height: 100px;
+}
+
+.no-click-event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+}
+
+[class^="mod-icon-"],
+[class*="mod-icon-"] {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.mod-icon-space {
+  margin-right: 10px;
+}
+
+.mod-run .mod-image {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

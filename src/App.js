@@ -1,13 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Main from './components/main/Main';
+import { Router } from 'react-router-dom';
+import createBrowserHistory from "history/createBrowserHistory";
+const history = createBrowserHistory();
 
-function App() {
-  return (
-    <div className="App">
-      Test
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router history={history}>
+        <div className="App">
+          <Main />
+          Hola
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

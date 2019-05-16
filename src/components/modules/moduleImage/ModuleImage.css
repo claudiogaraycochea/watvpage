@@ -1,0 +1,28 @@
+.mod-image {
+  color: #ffffff;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mod-image .size-100 {
+  width: 100%;
+}
+
+.mod-image .size-80 {
+  height: 160px;
+}
+
+.mod-image .size-60 {
+  height: 100px;
+}
+
+.mod-image .size-40 {
+  height: 80px;
+}
+
+.mod-image .size-20 {
+  height: 40px;
+}

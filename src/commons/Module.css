@@ -3,6 +3,9 @@
   min-height: 100%;
   text-align: center;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .mod-run .mod-box {

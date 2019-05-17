@@ -193,7 +193,7 @@ class Run extends Component {
 		if (this.state.runSrc !== undefined) {
 			return (
 				<div className="tertiary-style">
-					<div className="container padding-20">
+					<div className="container">
 						{this.getPreview()}
 					</div>
 				</div>

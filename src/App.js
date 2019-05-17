@@ -11,7 +11,6 @@ class App extends Component {
       <Router history={history}>
         <div className="App">
           <Main />
-          Hola
         </div>
       </Router>
     );

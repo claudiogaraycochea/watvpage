@@ -9,6 +9,7 @@ import "../../commons/Module.css";
 import ModuleLink from "../modules/moduleLink/ModuleLink";
 import ModuleSocialNetwork from "../modules/moduleSocialNetwork/ModuleSocialNetwork";
 import ModuleFacebookSendMessage from "../modules/moduleFacebookSendMessage/ModuleFacebookSendMessage";
+import ModuleTwitterSendMessage from "../modules/moduleTwitterSendMessage/ModuleTwitterSendMessage";
 import ModuleTitleDescription from "../modules/moduleTitleDescription/ModuleTitleDescription";
 import ModuleImage from "../modules/moduleImage/ModuleImage";
 import ModuleBuyNow from "../modules/moduleBuyNow/ModuleBuyNow";
@@ -20,7 +21,7 @@ class Run extends Component {
   constructor(props) {
     super(props);
     this.state = {
-			websiteId: '',
+      websiteId: '',
       userFirstname: '',
       websiteList: [],
       websiteData: {
@@ -28,11 +29,11 @@ class Run extends Component {
         run_src: {}
       }
     };
-	}
-	
-	componentWillMount() {
-		const websiteId = this.props.match.params.websiteId;
-		console.log('websiteId: ', websiteId);
+  }
+
+  componentWillMount() {
+    const websiteId = this.props.match.params.websiteId;
+    console.log('websiteId: ', websiteId);
     axios
       .get(`${API_URL}getRun/?website_id=${websiteId}`)
       .then(response => {
@@ -40,7 +41,7 @@ class Run extends Component {
         const runSrc = JSON.parse(data.run_src);
         const components = runSrc.components;
         const template = runSrc.template;
-				console.log(data);
+        console.log(data);
         this.setState({
           websiteData: data,
           websiteDraggable: components,
@@ -50,8 +51,8 @@ class Run extends Component {
           }
         });
       })
-      .catch(error => {});
-	}
+      .catch(error => { });
+  }
 
   getModuleComponent(data) {
     const moduleKey = data.moduleItem.moduleKey;
@@ -115,6 +116,17 @@ class Run extends Component {
             showStyle={data.showStyle}
           />
         );
+      case "ModuleTwitterSendMessage":
+        return (
+          <ModuleTwitterSendMessage
+            moduleSrc={moduleSrc}
+            properties={data.properties}
+            setModuleProperties={this.setModuleProperties}
+            runSrc={this.state.runSrc}
+            styles={data.styles}
+            showStyle={data.showStyle}
+          />
+        );
       case "ModuleBuyNow":
         return (
           <ModuleBuyNow
@@ -168,41 +180,44 @@ class Run extends Component {
     }
   }
 
-	getPreview() {
+  getPreview() {
     if (Object.keys(this.state.runSrc).length === 0) return <div>Empty</div>;
     else {
       const styles = this.state.runSrc.template.styles;
       const showStyle = true;
       return (
         <div className="mod-run" style={styles.background}>
-          {this.state.runSrc.components.map((item, key) => (
-            <div key={key} className="mod-box">
-              {this.getModuleComponent({
-                moduleItem: item, 
-                properties: false,
-                showStyle: showStyle})}
-            </div>
-          ))}
+          <div className="mod-container">
+            {this.state.runSrc.components.map((item, key) => (
+              <div key={key} className="mod-box">
+                {this.getModuleComponent({
+                  moduleItem: item,
+                  properties: false,
+                  showStyle: showStyle
+                })}
+              </div>
+            ))}
+          </div>
         </div>
       );
     }
-	}
-	
+  }
+
   render() {
-		console.log('state: ', this.state);
-		if (this.state.runSrc !== undefined) {
-			return (
-				<div className="tertiary-style">
-					<div className="container">
-						{this.getPreview()}
-					</div>
-				</div>
-			);			
-		}
-		else {
-			return (<div>Empty</div>);
-		}
-		
+    console.log('state: ', this.state);
+    if (this.state.runSrc !== undefined) {
+      return (
+        <div className="tertiary-style">
+          <div className="container">
+            {this.getPreview()}
+          </div>
+        </div>
+      );
+    }
+    else {
+      return (<div>Empty</div>);
+    }
+
   }
 }
 

@@ -4,12 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Run from '../run/Run';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
-    <Component {...props} />
-  )} />
-)
-
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +17,7 @@ class Main extends Component {
         <div className="content">
           <BrowserRouter>
             <Switch>
-              <Route path="/:websiteId" component={Run} />
+              <Route path="/page/:websiteId" component={Run} />
             </Switch>
           </BrowserRouter>
         </div>

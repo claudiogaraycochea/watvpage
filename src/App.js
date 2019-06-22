@@ -8,7 +8,7 @@ const history = createBrowserHistory();
 class App extends Component {
   render() {
     return (
-      <Router history={history}>
+      <Router history={history} basename={'/page'}>
         <div className="App">
           <Main />
         </div>

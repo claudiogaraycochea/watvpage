@@ -71,7 +71,7 @@ class ModuleFacebookSendMessage extends Component {
       return (
         <div className="mod-facebook-send-message mod-row">
           <div className="mod-row-small">
-            {/*<textarea id="noter-text-area" name="textarea" value={this.state.value} onChange={(e)=>this.handleChange(e, this.props)} /> */ }
+            Facebook
             <textarea className="mod-inp" value={this.state.moduleSrc.text} onChange={(e)=>this.handleChange(e, this.props)}/>
           </div>
           <div className="mod-row-small">

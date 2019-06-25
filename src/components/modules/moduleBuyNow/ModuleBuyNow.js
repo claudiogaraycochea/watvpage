@@ -59,7 +59,7 @@ class ModuleBuyNow extends Component {
       }
       return (
         <div className="mod-link mod-row">
-          <a href={this.props.moduleSrc.buttonLink} className="mod-btn mod-large-full mod-btn-no-space" style={styles.button}>
+          <a href={this.props.moduleSrc.buttonLink} target="_blank" className="mod-btn mod-large-full mod-btn-no-space" style={styles.button}>
             <i className="mod-icon-buy-now mod-icon-space" /> {(this.props.moduleSrc.buttonTitle!=='') ? this.props.moduleSrc.buttonTitle : 'Buy Now' }
           </a>
         </div>

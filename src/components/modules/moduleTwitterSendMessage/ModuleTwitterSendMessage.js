@@ -78,10 +78,11 @@ class ModuleTwitterSendMessage extends Component {
       return (
         <div className="mod-facebook-send-message mod-row">
           <div className="mod-row-small">
+            Twitter
             <textarea className="mod-inp" value={this.state.moduleSrc.text} onChange={(e)=>this.handleChange(e, this.props)}/>
           </div>
           <div className="mod-row-small">
-            <a href={this.state.twitterLink} className="mod-btn mod-large-full mod-btn-no-space" style={styles.button}>
+            <a href={this.state.twitterLink} target="_blank" className="mod-btn mod-large-full mod-btn-no-space" style={styles.button}>
               {(this.props.moduleSrc.buttonTitle!=='') ? this.props.moduleSrc.buttonTitle : 'Send' }
             </a>
           </div>

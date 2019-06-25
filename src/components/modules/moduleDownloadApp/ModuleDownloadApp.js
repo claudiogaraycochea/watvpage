@@ -46,12 +46,12 @@ class ModuleDownloadApp extends Component {
       return (
         <div className="mod-download-app mod-row">
           <div className="mod-row-small">
-            <a href={this.props.moduleSrc.buttonLinkGooglePlay} className="mod-btn mod-large-full mod-btn-no-space">
+            <a href={this.props.moduleSrc.buttonLinkGooglePlay} target="_blank" className="mod-btn mod-large-full mod-btn-no-space">
               <i className="mod-btn-google-play"/>
             </a>
           </div>
           <div className="mod-row-small">
-            <a href={this.props.moduleSrc.buttonLinkAppStore} className="mod-btn mod-large-full mod-btn-no-space">
+            <a href={this.props.moduleSrc.buttonLinkAppStore} target="_blank" className="mod-btn mod-large-full mod-btn-no-space">
             <i className="mod-btn-app-store"/>
             </a>
           </div>

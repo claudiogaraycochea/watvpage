@@ -58,7 +58,7 @@ class ModuleLink extends Component {
       }
       return (
         <div className="mod-link mod-row">
-          <a href={this.props.moduleSrc.buttonLink} className="mod-btn mod-large-full mod-btn-no-space" style={styles.button}>
+          <a href={this.props.moduleSrc.buttonLink} target="_blank" className="mod-btn mod-large-full mod-btn-no-space" style={styles.button}>
             {(this.props.moduleSrc.buttonTitle!=='') ? this.props.moduleSrc.buttonTitle : 'Visit Link' }
           </a>
         </div>

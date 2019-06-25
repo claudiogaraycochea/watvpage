@@ -38,7 +38,7 @@ class Run extends Component {
       .get(`${API_URL}getRun/?website_id=${websiteId}`)
       .then(response => {
         const data = commons.copyObj(response.data);
-        const runSrc = JSON.parse(data.run_src);
+        const runSrc = JSON.parse(atob(data.run_src));
         const components = runSrc.components;
         const template = runSrc.template;
         console.log(data);
